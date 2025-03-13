@@ -1,0 +1,54 @@
+--- a/runtest.py
++++ b/runtest.py
+@@ -143,13 +143,6 @@ except ImportError:
+ def readCmdParameters():
+     """Read the command line parameters"""
+     parser = argparse.ArgumentParser()
+-    parser.add_argument(
+-        "-c",
+-        "--command",
+-        nargs=1,
+-        help="The executable and optional arguments as a single string",
+-        required=True,
+-    )
+     parser.add_argument(
+         "-s",
+         "--script",
+@@ -212,19 +205,6 @@ def readCmdParameters():
+             )
+             parser.print_help()
+             sys.exit(1)
+-        for i in range(0, len(args["files"]) // 2):
+-            # delete the vtu files to compare
+-            referenceDirectory = (
+-                os.path.dirname(os.path.abspath(__file__)).rstrip("bin") + "test/references"
+-            )
+-            if os.path.dirname(args["files"][(i * 2) + 1]) == referenceDirectory:
+-                sys.stderr.write(
+-                    "Tried to delete a reference solution. "
+-                    "Specify reference file first, then the current solution. "
+-                    "Usage: '[-f ref1 cur1 [[ref2] [cur2] ...]]'"
+-                )
+-                sys.exit(1)
+-            subprocess.call(["rm", "-fv", args["files"][(i * 2) + 1]])
+ 
+     return args
+ 
+@@ -328,17 +308,6 @@ def runTest():
+ 
+     args = readCmdParameters()
+ 
+-    # run the test
+-    res = 1
+-    try:
+-        res = subprocess.call(shlex.split(args["command"][0]))
+-    except OSError:
+-        print(args["command"][0].split())
+-        print("OSError: Command not found. Most likely the executable specified doesn't exist.")
+-        sys.exit(1)
+-    if res:
+-        sys.exit(res)
+-
+     # run the comparison
+     if args["script"]:
+         runRegressionTest(args=args)

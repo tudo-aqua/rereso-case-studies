@@ -1,0 +1,7 @@
+{
+  "module": "Koch2024a",
+  "target": "flow_one_compartment",
+  "working-directory": "app",
+  "command": "flow_one_compartment",
+  "arguments": []
+}

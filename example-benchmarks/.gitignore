@@ -1,0 +1,16 @@
+# DuMux downloads
+dumux-*
+
+# Benchmarks
+*.tar.xz
+
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
