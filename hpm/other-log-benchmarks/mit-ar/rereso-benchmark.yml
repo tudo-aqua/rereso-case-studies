@@ -1,0 +1,19 @@
+# SPDX-FileCopyrightText: 2023-2025 The ReReSo Authors, see AUTHORS.md
+#
+# SPDX-License-Identifier: CC0-1.0
+
+rereso-benchmark-version: "0.3"
+metadata:
+  name: LogHub Hadoop Logs with LogHub 2.0 normalization
+  references:
+    - https://courses.media.mit.edu/2004fall/mas622j/04.projects/home/
+    - https://doi.org/10.1007/978-3-540-24646-6_10
+license:
+  custom: No copyright claimed by the authors
+format:
+  media-type: application/json
+  schemas:
+    - https://aqua.tools/rereso/releases/download/0.3/logs-0.3.json5
+    - https://aqua.tools/rereso/releases/download/0.3/timed-logs-0.3.json5
+benchmarks:
+  - path: mit-ar.json.zst

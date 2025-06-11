@@ -1,0 +1,34 @@
+# SPDX-FileCopyrightText: 2023-2025 The ReReSo Authors, see AUTHORS.md
+#
+# SPDX-License-Identifier: CC0-1.0
+
+rereso-benchmark-version: "0.3"
+metadata:
+  name: Abbadingo One training data
+  references:
+    - https://abbadingo.cs.nuim.ie/
+    - https://doi.org/10.1007/BFb0054059
+license:
+  custom: No copyright claimed by the authors
+format:
+  media-type: application/json
+  schemas:
+    - https://aqua.tools/rereso/releases/download/0.3/logs-0.3.json5
+    - https://aqua.tools/rereso/releases/download/0.3/classified-logs-0.3.json5
+benchmarks:
+  - path: abbadingo-one-1.json.zst
+  - path: abbadingo-one-2.json.zst
+  - path: abbadingo-one-3.json.zst
+  - path: abbadingo-one-4.json.zst
+  - path: abbadingo-one-5.json.zst
+  - path: abbadingo-one-6.json.zst
+  - path: abbadingo-one-7.json.zst
+  - path: abbadingo-one-8.json.zst
+  - path: abbadingo-one-9.json.zst
+  - path: abbadingo-one-a.json.zst
+  - path: abbadingo-one-b.json.zst
+  - path: abbadingo-one-c.json.zst
+  - path: abbadingo-one-d.json.zst
+  - path: abbadingo-one-r.json.zst
+  - path: abbadingo-one-s.json.zst
+  - path: abbadingo-one-t.json.zst

@@ -1,0 +1,49 @@
+# SPDX-FileCopyrightText: 2023-2025 The ReReSo Authors, see AUTHORS.md
+#
+# SPDX-License-Identifier: CC0-1.0
+
+rereso-benchmark-version: "0.3"
+metadata:
+  name: LogHub Hadoop Logs with LogHub 2.0 normalization
+  references:
+    - https://github.com/logpai/loghub
+    - https://github.com/logpai/loghub-2.0
+    - https://doi.org/10.1109/ISSRE59848.2023.00071
+    - https://doi.org/10.1145/3650212.3652123
+license:
+  custom: |
+    LICENSE OF LOGHUB
+    
+    The datasets are freely available for research or academic work, subject to
+    the following condition: For any usage or distribution of the loghub datasets,
+    please refer to the loghub repository URL (https://github.com/logpai/loghub)
+    and cite the following loghub paper where applicable.
+
+    Jieming Zhu, Shilin He, Pinjia He, Jinyang Liu, Michael R. Lyu. Loghub: A Large
+    Collection of System Log Datasets for AI-driven Log Analytics. In ISSRE, 2023.
+    
+    The above license notice shall be included in all copies of the datasets.
+    
+    LICENSE OF LOGHUB-2.0
+  
+    The datasets are freely available for research or academic work, subject to
+    the following condition: For any usage or distribution of the loghub-2.0 datasets,
+    please refer to the loghub repository URL (https://github.com/logpai/loghub-2.0)
+    and cite the following loghub papers where applicable.
+  
+    + Zhihan Jiang, Jinyang Liu, Junjie Huang, Yichen Li, Yintong Huo, Jiazhen Gu,
+    Zhuangbin Chen, Jieming Zhu, Michael R. Lyu. A Large-scale Evaluation for
+    Log Parsing Techniques: How Far are We? In ISSTA, 2024.
+    + Jieming Zhu, Shilin He, Pinjia He, Jinyang Liu, Michael R. Lyu. Loghub: A Large
+      Collection of System Log Datasets for AI-driven Log Analytics. In ISSRE, 2023.
+  
+    The above license notice shall be included in all copies of the datasets.
+format:
+  media-type: application/json
+  schemas:
+    - https://aqua.tools/rereso/releases/download/0.3/logs-0.3.json5
+    - https://aqua.tools/rereso/releases/download/0.3/normalized-logs-0.3.json5
+    - https://aqua.tools/rereso/releases/download/0.3/timed-logs-0.3.json5
+benchmarks:
+  - path: hadoop-PageRank.json.zst
+  - path: hadoop-WordCount.json.zst

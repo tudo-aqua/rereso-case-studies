@@ -1,0 +1,13 @@
+# SPDX-FileCopyrightText: 2023-2025 The ReReSo Authors, see AUTHORS.md
+#
+# SPDX-License-Identifier: Apache-2.0
+
+Bootstrap: docker
+From: python:3
+
+%files
+  nfer_format_compatibility-0.1.0-py3-none-any.whl /
+
+%post
+  pip install --root-user-action ignore /nfer_format_compatibility-0.1.0-py3-none-any.whl
+  rm -f /nfer_format_compatibility-0.1.0-py3-none-any.whl

@@ -1,0 +1,49 @@
+# SPDX-FileCopyrightText: 2023-2025 The ReReSo Authors, see AUTHORS.md
+#
+# SPDX-License-Identifier: CC0-1.0
+
+rereso-tool-version: "0.3"
+metadata:
+  name: Heat Pump Mining Stage 2
+  references:
+    - https://aqua.tools/heat-pump-mining
+license:
+  custom: HPM is licensed as Apache 2.0, see container for other licenses of bundled software
+commands:
+  - name: convert-format -i [input.zip] -o [output.json]
+    input-formats:
+      - media-type: application/zip
+    output-formats:
+      - media-type: application/json
+        schemas:
+          - https://aqua.tools/rereso/releases/download/0.3/logs-0.3.json5
+          - https://aqua.tools/rereso/releases/download/0.3/timed-logs-0.3.json5
+  - name: select-and-merge -i [input.json] -o [output.json]
+    input-formats:
+      - media-type: application/json
+        schemas:
+          - https://aqua.tools/rereso/releases/download/0.3/logs-0.3.json5
+          - https://aqua.tools/rereso/releases/download/0.3/timed-logs-0.3.json5
+    output-formats:
+      - media-type: application/json
+        schemas:
+          - https://aqua.tools/rereso/releases/download/0.3/logs-0.3.json5
+          - https://aqua.tools/rereso/releases/download/0.3/timed-logs-0.3.json5
+  - name: learn -i [train.json] -o [automaton.dot]
+    input-formats:
+      - media-type: application/json
+        schemas:
+          - https://aqua.tools/rereso/releases/download/0.3/logs-0.3.json5
+          - https://aqua.tools/rereso/releases/download/0.3/timed-logs-0.3.json5
+    output-formats:
+      - media-type: text/vnd.graphviz
+  - name: validate -a [automaton.dot] -i [validation.json] -o [result.csv]
+    input-formats:
+      - media-type: text/vnd.graphviz
+      - media-type: application/json
+        schemas:
+          - https://aqua.tools/rereso/releases/download/0.3/logs-0.3.json5
+          - https://aqua.tools/rereso/releases/download/0.3/timed-logs-0.3.json5
+    output-formats:
+      - media-type: text/csv
+container: hpm.sif

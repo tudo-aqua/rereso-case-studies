@@ -1,0 +1,16 @@
+# SPDX-FileCopyrightText: 2023-2025 The ReReSo Authors, see AUTHORS.md
+#
+# SPDX-License-Identifier: CC0-1.0
+
+rereso-benchmark-version: "0.3"
+metadata:
+  name: DuMux / Koch2024a replication artifact
+  references:
+    - https://git.iws.uni-stuttgart.de/dumux-pub/Koch2024a
+    - https://doi.org/10.1016/j.camwa.2020.02.012
+license:
+  spdx: CC-BY-4.0
+format:
+  media-type: application/x-tar
+benchmarks:
+  - path: flow_one_compartment.tar.xz

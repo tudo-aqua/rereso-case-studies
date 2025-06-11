@@ -1,0 +1,19 @@
+# SPDX-FileCopyrightText: 2023-2025 The ReReSo Authors, see AUTHORS.md
+#
+# SPDX-License-Identifier: CC0-1.0
+
+rereso-benchmark-version: "0.3"
+metadata:
+  name: ALFRED Lite PDDL data
+  references:
+    - https://askforalfred.com/
+    - https://doi.org/10.1109/CVPR42600.2020.01075
+license:
+  spdx: "MIT"
+format:
+  media-type: application/json
+  schemas:
+    - https://aqua.tools/rereso/releases/download/0.3/logs-0.3.json5
+    - https://aqua.tools/rereso/releases/download/0.3/classified-logs-0.3.json5
+benchmarks:
+  - path: alfred.json.zst

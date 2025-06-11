@@ -1,0 +1,32 @@
+# SPDX-FileCopyrightText: 2023-2025 The ReReSo Authors, see AUTHORS.md
+#
+# SPDX-License-Identifier: CC0-1.0
+
+rereso-benchmark-version: "0.3"
+metadata:
+  name: DuMux 3.9.0 examples
+  description: DuMux CI benchmark bundles for all included examples
+  references:
+    - https://dumux.org/
+license:
+  custom: |
+    DuMux is licensed as GPLv3+.
+    Reference data is licensed as CC0-1.0.
+format:
+  media-type: application/x-tar
+benchmarks:
+  - path: example_1p_rotationsymmetry.tar.xz
+  - path: example_1ptracer.tar.xz
+  - path: example_2p_pointsource_adaptive.tar.xz
+  - path: example_biomineralization.tar.xz
+  - path: example_cahn_hilliard.tar.xz
+  - path: example_cahn_hilliard_parallel.tar.xz
+  - path: example_diffusion.tar.xz
+  - path: example_diffusion_parallel.tar.xz
+  - path: example_embedded_network_1d3d.tar.xz
+  - path: example_ff_liddrivencavity.tar.xz
+  - path: example_ff_liddrivencavity_re1000.tar.xz
+  - path: example_freeflow_channel_navierstokes.tar.xz
+  - path: example_pnm1p_creeping_flow_upscaling.tar.xz
+  - path: example_pnm1p_upscaling.tar.xz
+  - path: example_shallowwaterfriction.tar.xz

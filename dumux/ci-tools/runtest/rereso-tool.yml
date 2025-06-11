@@ -1,0 +1,22 @@
+# SPDX-FileCopyrightText: 2023-2025 The ReReSo Authors, see AUTHORS.md
+#
+# SPDX-License-Identifier: CC0-1.0
+
+rereso-tool-version: "0.3"
+metadata:
+  name: DuMux CI comparison tool
+  references:
+    - https://dumux.org/
+    - https://doi.org/10.1016/j.advwatres.2011.03.007
+    - https://doi.org/10.1016/j.camwa.2020.02.012
+license:
+  custom: |
+    runtest.py is licensed as GPLv3+.
+    Support script is licensed as Apache 2.0.
+    See container for other licenses of bundled software.
+commands:
+  - name: run-rereso-runtest-benchmark [input.tar]
+    input-formats:
+      - media-type: application/x-tar
+      - media-type: application/x-hdf5
+container: runtest.sif

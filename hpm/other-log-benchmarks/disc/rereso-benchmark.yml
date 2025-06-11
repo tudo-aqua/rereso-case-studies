@@ -1,0 +1,139 @@
+# SPDX-FileCopyrightText: 2023-2025 The ReReSo Authors, see AUTHORS.md
+#
+# SPDX-License-Identifier: CC0-1.0
+
+rereso-benchmark-version: "0.3"
+metadata:
+  name: DISC replication data
+  references:
+    - https://github.com/andrewli77/DISC
+    - https://doi.org/10.1609/aaai.v35i11.17161
+license:
+  custom: "MIT"
+format:
+  media-type: application/json
+  schemas:
+    - https://aqua.tools/rereso/releases/download/0.3/logs-0.3.json5
+    - https://aqua.tools/rereso/releases/download/0.3/classified-logs-0.3.json5
+    - https://aqua.tools/rereso/releases/download/0.3/tvt-split-logs-0.3.json5
+benchmarks:
+ - path: disc-alfred-1.json.zst
+ - path: disc-alfred-2.json.zst
+ - path: disc-alfred-3.json.zst
+ - path: disc-alfred-4.json.zst
+ - path: disc-alfred-5.json.zst
+ - path: disc-alfred-6.json.zst
+ - path: disc-alfred-7.json.zst
+ - path: disc-alfred-8.json.zst
+ - path: disc-alfred-9.json.zst
+ - path: disc-alfred-10.json.zst
+ - path: disc-alfred-11.json.zst
+ - path: disc-alfred-12.json.zst
+ - path: disc-alfred-13.json.zst
+ - path: disc-alfred-14.json.zst
+ - path: disc-alfred-15.json.zst
+ - path: disc-alfred-16.json.zst
+ - path: disc-alfred-17.json.zst
+ - path: disc-alfred-18.json.zst
+ - path: disc-alfred-19.json.zst
+ - path: disc-alfred-20.json.zst
+ - path: disc-alfred-21.json.zst
+ - path: disc-alfred-22.json.zst
+ - path: disc-alfred-23.json.zst
+ - path: disc-alfred-24.json.zst
+ - path: disc-alfred-25.json.zst
+ - path: disc-alfred-26.json.zst
+ - path: disc-alfred-27.json.zst
+ - path: disc-alfred-28.json.zst
+ - path: disc-alfred-29.json.zst
+ - path: disc-alfred-30.json.zst
+ - path: disc-malware-BATTERY_LOW-1.json.zst
+ - path: disc-malware-BATTERY_LOW-2.json.zst
+ - path: disc-malware-BATTERY_LOW-3.json.zst
+ - path: disc-malware-BATTERY_LOW-4.json.zst
+ - path: disc-malware-BATTERY_LOW-5.json.zst
+ - path: disc-malware-BATTERY_LOW-6.json.zst
+ - path: disc-malware-BATTERY_LOW-7.json.zst
+ - path: disc-malware-BATTERY_LOW-8.json.zst
+ - path: disc-malware-BATTERY_LOW-9.json.zst
+ - path: disc-malware-BATTERY_LOW-10.json.zst
+ - path: disc-malware-BATTERY_LOW-11.json.zst
+ - path: disc-malware-BATTERY_LOW-12.json.zst
+ - path: disc-malware-BATTERY_LOW-13.json.zst
+ - path: disc-malware-BATTERY_LOW-14.json.zst
+ - path: disc-malware-BATTERY_LOW-15.json.zst
+ - path: disc-malware-BATTERY_LOW-16.json.zst
+ - path: disc-malware-BATTERY_LOW-17.json.zst
+ - path: disc-malware-BATTERY_LOW-18.json.zst
+ - path: disc-malware-BATTERY_LOW-19.json.zst
+ - path: disc-malware-BATTERY_LOW-20.json.zst
+ - path: disc-malware-BATTERY_LOW-21.json.zst
+ - path: disc-malware-BATTERY_LOW-22.json.zst
+ - path: disc-malware-BATTERY_LOW-23.json.zst
+ - path: disc-malware-BATTERY_LOW-24.json.zst
+ - path: disc-malware-BATTERY_LOW-25.json.zst
+ - path: disc-malware-BATTERY_LOW-26.json.zst
+ - path: disc-malware-BATTERY_LOW-27.json.zst
+ - path: disc-malware-BATTERY_LOW-28.json.zst
+ - path: disc-malware-BATTERY_LOW-29.json.zst
+ - path: disc-malware-BATTERY_LOW-30.json.zst
+ - path: disc-malware-BOOT_COMPLETED-1.json.zst
+ - path: disc-malware-BOOT_COMPLETED-2.json.zst
+ - path: disc-malware-BOOT_COMPLETED-3.json.zst
+ - path: disc-malware-BOOT_COMPLETED-4.json.zst
+ - path: disc-malware-BOOT_COMPLETED-5.json.zst
+ - path: disc-malware-BOOT_COMPLETED-6.json.zst
+ - path: disc-malware-BOOT_COMPLETED-7.json.zst
+ - path: disc-malware-BOOT_COMPLETED-8.json.zst
+ - path: disc-malware-BOOT_COMPLETED-9.json.zst
+ - path: disc-malware-BOOT_COMPLETED-10.json.zst
+ - path: disc-malware-BOOT_COMPLETED-11.json.zst
+ - path: disc-malware-BOOT_COMPLETED-12.json.zst
+ - path: disc-malware-BOOT_COMPLETED-13.json.zst
+ - path: disc-malware-BOOT_COMPLETED-14.json.zst
+ - path: disc-malware-BOOT_COMPLETED-15.json.zst
+ - path: disc-malware-BOOT_COMPLETED-16.json.zst
+ - path: disc-malware-BOOT_COMPLETED-17.json.zst
+ - path: disc-malware-BOOT_COMPLETED-18.json.zst
+ - path: disc-malware-BOOT_COMPLETED-19.json.zst
+ - path: disc-malware-BOOT_COMPLETED-20.json.zst
+ - path: disc-malware-BOOT_COMPLETED-21.json.zst
+ - path: disc-malware-BOOT_COMPLETED-22.json.zst
+ - path: disc-malware-BOOT_COMPLETED-23.json.zst
+ - path: disc-malware-BOOT_COMPLETED-24.json.zst
+ - path: disc-malware-BOOT_COMPLETED-25.json.zst
+ - path: disc-malware-BOOT_COMPLETED-26.json.zst
+ - path: disc-malware-BOOT_COMPLETED-27.json.zst
+ - path: disc-malware-BOOT_COMPLETED-28.json.zst
+ - path: disc-malware-BOOT_COMPLETED-29.json.zst
+ - path: disc-malware-BOOT_COMPLETED-30.json.zst
+ - path: disc-mit_1-1.json.zst
+ - path: disc-mit_1-2.json.zst
+ - path: disc-mit_1-3.json.zst
+ - path: disc-mit_1-4.json.zst
+ - path: disc-mit_1-5.json.zst
+ - path: disc-mit_1-6.json.zst
+ - path: disc-mit_1-7.json.zst
+ - path: disc-mit_1-8.json.zst
+ - path: disc-mit_1-9.json.zst
+ - path: disc-mit_1-10.json.zst
+ - path: disc-mit_1-11.json.zst
+ - path: disc-mit_1-12.json.zst
+ - path: disc-mit_1-13.json.zst
+ - path: disc-mit_1-14.json.zst
+ - path: disc-mit_1-15.json.zst
+ - path: disc-mit_1-16.json.zst
+ - path: disc-mit_1-17.json.zst
+ - path: disc-mit_1-18.json.zst
+ - path: disc-mit_1-19.json.zst
+ - path: disc-mit_1-20.json.zst
+ - path: disc-mit_1-21.json.zst
+ - path: disc-mit_1-22.json.zst
+ - path: disc-mit_1-23.json.zst
+ - path: disc-mit_1-24.json.zst
+ - path: disc-mit_1-25.json.zst
+ - path: disc-mit_1-26.json.zst
+ - path: disc-mit_1-27.json.zst
+ - path: disc-mit_1-28.json.zst
+ - path: disc-mit_1-29.json.zst
+ - path: disc-mit_1-30.json.zst

@@ -1,7 +1,0 @@
-# DuMux downloads
-dumux-*
-runtest.py
-
-# Tool containers
-*.sif
-

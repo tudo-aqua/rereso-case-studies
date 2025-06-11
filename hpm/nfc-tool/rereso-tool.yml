@@ -1,0 +1,14 @@
+# SPDX-FileCopyrightText: 2023-2025 The ReReSo Authors, see AUTHORS.md
+#
+# SPDX-License-Identifier: CC0-1.0
+
+rereso-tool-version: "0.3"
+metadata:
+  name: Heat Pump Mining Stage 1
+  references:
+    - https://bitbucket.org/nastaran_k77/heat-pump-mining
+license:
+  custom: Shared Source
+commands:
+  - name: event-trace-extraction-by-cpd
+container: nfer_format_compatibility.sif

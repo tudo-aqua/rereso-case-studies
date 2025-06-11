@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+
+# SPDX-FileCopyrightText: 2023-2025 The ReReSo Authors, see AUTHORS.md
+#
+# SPDX-License-Identifier: Apache-2.0
+
+set -euxo pipefail
+
+if [ "$#" -lt 2 ]; then
+  echo "Usage: unpack-and-run TOOL BENCHMARK" >&2
+  exit 1
+fi
+tool="$1"
+benchmark="$2"
+
+mkdir "$benchmark.run"
+(
+  pushd "$benchmark.run"
+
+  tar -xvf "$benchmark"
+  inputs=( *.input )
+  input="${inputs[0]}"
+
+  "$tool" "$input"
+)

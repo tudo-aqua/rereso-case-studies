@@ -1,0 +1,17 @@
+# SPDX-FileCopyrightText: 2023-2025 The ReReSo Authors, see AUTHORS.md
+#
+# SPDX-License-Identifier: Apache-2.0
+
+Bootstrap: docker-archive
+From: koch2024a.tar
+
+%files
+  unpack-and-run /usr/bin
+
+%post
+  (
+    cd /dumux/Koch2024a/build-cmake/app
+    make flow_one_compartment
+    cp flow_one_compartment /usr/local/bin
+  )
+  rm -rf /dumux/Koch2024a

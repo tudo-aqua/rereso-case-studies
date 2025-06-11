@@ -1,0 +1,44 @@
+#!/usr/bin/env bash
+
+# SPDX-FileCopyrightText: 2023-2025 The ReReSo Authors, see AUTHORS.md
+#
+# SPDX-License-Identifier: Apache-2.0
+
+set -euxo pipefail
+
+if [ "$#" -lt 1 ]; then
+  echo "Usage: run-rereso-runtest-benchmark BENCHMARK [RESULTS]" >&2
+  exit 1
+fi
+benchmark="$1"
+
+if [ "$#" -lt 2 ]; then
+  result_dir="$PWD"
+else
+  result_dir="$2"
+fi
+
+benchmark_dir="$(mktemp -d --tmpdir rereso-runtest-benchmark.XXXXXXXXXX)"
+
+tar -C "$benchmark_dir" -xvf "$benchmark"
+
+if [ "$(jq -r 'has("comparison-mode")' "$benchmark_dir/benchmark.json")" != "true" ]; then
+  echo "Benchmark is non-comparing, exiting."
+  exit
+fi
+
+comparison_mode="$(jq -r '."comparison-mode"' "$benchmark_dir/benchmark.json")"
+
+n_comparisons="$(jq -r '.comparisons | length' "$benchmark_dir/benchmark.json")"
+
+command_line=(runtest --script "$comparison_mode" --files)
+for (( i=0; i<n_comparisons; i++ )); do
+  command_line+=(
+    "$benchmark_dir/references/$(jq -r ".comparisons[$i].reference" "$benchmark_dir/benchmark.json")"
+    "$result_dir/$(jq -r ".comparisons[$i].generated" "$benchmark_dir/benchmark.json")"
+  )
+done
+
+"${command_line[@]}"
+
+rm -rf "$benchmark_dir"
