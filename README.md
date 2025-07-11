@@ -4,10 +4,10 @@ SPDX-FileCopyrightText: 2023-2025 The ReReSo Authors, see AUTHORS.md
 SPDX-License-Identifier: CC-BY-4.0
 -->
 
-# ReReRo Case Studies
+# Recobinable Benchmarks and Software Tools: Case Studies
 
-This contains all case studies for ReReSo and the scripts to build benchmark and tool bundles from then. The project
-contains the following components:
+This contains all case studies for the paper *Towards a Specification for Recombinable Benchmarks and Software Tools*
+and the scripts to build benchmark and tool bundles from then. The project contains the following components:
 
 1. The DuMux CI case study in `dumux/ci-tools`, `dumux/example-benchmarks`, and `paper-benchmark`.
 2. The DuMux Koch2024a replication case study in `dumux/koch2024a-repro`.
@@ -32,8 +32,8 @@ We transform all DuMux examples (that double as integration tests) into benchmar
 tests against different DuMux versions. To further separation, result comparison is delegated to a separate tool. It
 becomes possible to, e.g., run a DuMux 3.9.0 example on DuMux 3.8.0 and validate the result using the newer comparator.
 
-We also demonstrate the packaging of a paper artifact as a benchmark. This only requires factoring out necessary
-patches and writing the metadata file.
+We also demonstrate the packaging of a paper artifact as a benchmark. This only requires factoring out necessary patches
+and writing the metadata file.
 
 ### DuMux CI Tools
 
