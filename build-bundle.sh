@@ -8,6 +8,8 @@ set -euo pipefail
 
 shopt -s globstar nullglob
 
+archive="$1"
+
 declare -a files
 
 for benchmark in **/rereso-benchmark.yml; do
@@ -23,8 +25,4 @@ for tool in **/rereso-tool.yml; do
   files+=( "$(dirname "$tool")/$file" )
 done
 
-if [ $# -ge 1 ]; then
-  exec tar cvf "$1" "${files[@]}"
-else
-  exec tar cv "${files[@]}"
-fi
+exec zip "$archive" "${files[@]}"

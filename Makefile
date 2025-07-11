@@ -6,13 +6,13 @@ SUBDIRS = dumux hpm
 
 .PHONY: all clean all-sub clean-sub
 
-all: bundle.tar.zst
+all: case-studies.zip
 
 clean: clean-sub
-	rm -f bundle.zip
+	rm -f case-studies.zip
 
-bundle.tar.zst: build-bundle.sh all-sub
-	./build-bundle.sh | zstd > bundle.tar.zst
+case-studies.zip: build-bundle.sh all-sub
+	./build-bundle.sh $@
 
 all-sub clean-sub:
 	for dir in $(SUBDIRS); do $(MAKE) -C $$dir $(@:%-sub=%); done

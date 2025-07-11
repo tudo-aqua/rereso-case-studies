@@ -41,7 +41,10 @@ jobs:
       - uses: astral-sh/setup-uv@v5
 
       - run: make -j $(nproc)
+      - run: sed '/^#/,$!d' README.Zenodo.md > README.md
       - uses: actions/upload-artifact@v4
         with:
-          name: bundle
-          path: bundle.tar.zst
+          name: zenodo-package
+          path: |
+            case-studies.zip
+            README.md
